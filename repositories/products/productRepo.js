@@ -1,4 +1,3 @@
-const Video = require("../videos/models/videoModel");
 const productsModel = require("./models/productsModel");
 
 const productRepo = async (videoId) => {

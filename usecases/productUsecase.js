@@ -4,7 +4,7 @@ const productUsecase = async (videoId) => {
     try {
         const productList = await productRepo(videoId);
         if (productList.length == 0) {
-            return null;
+            throw new Error('No products found for the given Video ID');
         }
         return productList
     } catch (error) {
