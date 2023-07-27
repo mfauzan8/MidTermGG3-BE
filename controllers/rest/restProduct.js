@@ -1,6 +1,6 @@
 const productUsecase = require("../../usecases/productUsecase")
 
-const restProduct = async (req, res) => {
+const getProduct = async (req, res) => {
     const { videoId } = req.params;
     try {
         const productList = await productUsecase(videoId);
@@ -13,4 +13,4 @@ const restProduct = async (req, res) => {
     }
 };
 
-module.exports = { restProduct };
+module.exports = { getProduct };

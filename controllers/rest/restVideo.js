@@ -1,6 +1,6 @@
 const getVideosUsecase = require("../../usecases/getVideosUsecase")
 
-const restVideo = async (req, res) => {
+const getVideos = async (req, res) => {
     try {
         const videos = await getVideosUsecase();
         res.status(200).json({
@@ -12,4 +12,4 @@ const restVideo = async (req, res) => {
     }
 };
 
-module.exports = { restVideo };
+module.exports = { getVideos };

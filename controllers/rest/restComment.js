@@ -1,6 +1,6 @@
 const commentUsecase = require("../../usecases/commentUsecase")
 
-const restComment = async (req, res) => {
+const getComment = async (req, res) => {
     const { videoId } = req.params;
     try {
         const commentList = await commentUsecase(videoId);
@@ -13,4 +13,9 @@ const restComment = async (req, res) => {
     }
 };
 
-module.exports = { restComment };
+const createComment = async (req, res) => {
+
+}
+
+
+module.exports = { getComment,createComment };
