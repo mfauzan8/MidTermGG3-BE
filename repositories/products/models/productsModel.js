@@ -14,8 +14,9 @@ const productSchema = new mongoose.Schema({
         required: true,
     },
     video: {
-        type: Schema.Types.ObjectId,
-        ref: 'Video',
+        type: mongoose.Schema.Types.ObjectId,
+        required: true,
+        ref: 'video',
     },
 });
 
