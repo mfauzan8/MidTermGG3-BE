@@ -2,8 +2,10 @@
 ## i. Database structure
 ![structure db](https://i.ibb.co/K9k8JVC/Blank-diagram-1.png)
 ## ii. API structure
-
-    
+```mermaid
+graph LR
+A[REQUEST] --> B[ROUTES] --> C[CONTROLLER] --> D[USECASE] --> E[REPOSITORY] --> F[MODEL]-->G[RESPON]
+```
 ## iii. List API request and response
 
 ### * Video Tumbnails
