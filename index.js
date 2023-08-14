@@ -1,10 +1,13 @@
 require('dotenv').config();
 const express = require('express')
+var cors = require('cors');
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser');
 const routes = require('./routes/routes.js')
 
 const app = express()
+app.use(cors())
+
 const PORT = process.env.PORT
 const DB_URL = process.env.DB_URL
 
