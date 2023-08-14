@@ -11,16 +11,19 @@ app.use(cors())
 const PORT = process.env.PORT
 const DB_URL = process.env.DB_URL
 
-mongoose.connect(DB_URL);
-const db = mongoose.connection
+mongoose.connect(DB_URL)
+    .then(() => console.log('DB connection successful'))
+    .catch((err) => console.log(err))
+// const db = mongoose.connect
 
-db.on('error', (err) => {
-    console.log(err)
-})
 
-db.once('connected', () => {
-    console.log('Connected to MongoDB')
-})
+// db.on('error', (err) => {
+//     console.log(err)
+// })
+
+// db.once('connected', () => {
+//     console.log('Connected to MongoDB')
+// })
 
 app.use(bodyParser.json())
 
