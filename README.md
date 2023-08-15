@@ -32,10 +32,12 @@ A[REQUEST] --> B[ROUTES] --> C[CONTROLLER] --> D[USECASE] --> E[REPOSITORY] --> 
 {
   status: success
   list_videos: [
-           {<user_object>},
-           {<user_object>},
-           {<user_object>},
-           {<user_object>}
+           {
+            _id:objectId,
+            title: String,
+            video_url: String,
+            image: String
+          },          
          ]
 }
 ```
@@ -46,7 +48,7 @@ A[REQUEST] --> B[ROUTES] --> C[CONTROLLER] --> D[USECASE] --> E[REPOSITORY] --> 
   _id : objectId,
   title : String,
   link_product : String,
-  price_product : Number,
+  price_product : Double,
   videoId : objectId
 }
 ```
@@ -65,10 +67,12 @@ A[REQUEST] --> B[ROUTES] --> C[CONTROLLER] --> D[USECASE] --> E[REPOSITORY] --> 
 {
   status: success
   products: [
-           {<user_object>},
-           {<user_object>},
-           {<user_object>},
-           {<user_object>}
+          {
+            "_id": objectId,
+            "title": String,
+            "link_product": String,
+            "price_product": Double
+          }
          ]
 }
 ```
@@ -100,11 +104,14 @@ A[REQUEST] --> B[ROUTES] --> C[CONTROLLER] --> D[USECASE] --> E[REPOSITORY] --> 
 ```
 {
   status: success
-  products: [
-           {<user_object>},
-           {<user_object>},
-           {<user_object>},
-           {<user_object>}
+  comment: [
+            {
+            _id: objectId,
+            username: String,
+            comment : String,
+            timestamp : Date,
+            videoId : objectId
+            }
          ]
 }
 ```
